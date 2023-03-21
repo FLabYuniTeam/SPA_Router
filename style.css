@@ -30,6 +30,7 @@ header {
 .logoAndTitle .title {
   font-size: 12px;
   line-height: 30px;
+  color: black;
 }
 
 .mainContainer {
