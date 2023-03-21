@@ -1,0 +1,184 @@
+:root {
+  /* size */
+  --font-size__micro: 10px;
+  --font-size__small: 12px;
+  --font-size__mediumSmall: 13px;
+  --font-size__medium: 15px;
+  --font-size__large: 20px;
+}
+
+header {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  border-bottom: 1px solid rgb(232, 225, 225);
+  background-color: rgb(240, 240, 247);
+}
+
+.logoAndTitle {
+  display: flex;
+  height: 30px;
+  width: 200px;
+  margin-left: 150px;
+}
+
+.logoAndTitle > img {
+  width: 25px;
+  height: 25px;
+}
+
+.logoAndTitle .title {
+  font-size: 12px;
+  line-height: 30px;
+  color: black;
+}
+
+.container {
+  display: flex;
+  padding-top: 50px;
+}
+
+.container-inner {
+  margin: 0 auto;
+}
+
+.imgWrap > img {
+  width: 100%;
+  height: 200px;
+}
+
+.writer {
+  display: flex;
+}
+
+.writer > img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.writer-info__nameFiled {
+  display: flex;
+  margin-top: 5px;
+  font-size: var(--font-size__micro);
+}
+
+.writer-info__date {
+  margin-top: 2px;
+  font-size: calc(var(--font-size__micro) / 2);
+  color: rgb(74, 71, 71, 0.5);
+}
+
+.contentsWrap-inner {
+  display: flex;
+}
+
+#contentsBox {
+  margin: 0 auto;
+  width: 700px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  font-size: var(--font-size__micro);
+  color: rgb(52, 50, 50, 0.5);
+  background-color: antiquewhite;
+}
+
+.contact {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.company {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+
+.company-title {
+  margin-bottom: 10px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+.mentoring {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.mentoring-title {
+  margin-bottom: 10px;
+}
+
+.customer {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.customer-title {
+  margin-bottom: 10px;
+}
+
+.companyInfo {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 20px;
+  vertical-align: center;
+}
+
+.companyInfo > img {
+  width: 40px;
+  height: 30px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.companyInfo-title {
+  font-size: var(--font-size__medium);
+  margin-right: 10px;
+  line-height: 50px;
+}
+
+.companyInfo > p {
+  width: 50%;
+  margin-left: 30px;
+}
+
+.socialLink {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  font-size: var(--font-size__large);
+}
+
+i {
+  width: 15px;
+  height: 15px;
+  padding: 10px;
+}
+
+a {
+  border: none;
+  outline: none;
+  color: rgb(174, 163, 163);
+  text-decoration: none;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 699px) {
+  .imgWrap > img {
+    width: 100vw;
+    transition: all 0.5s ease;
+  }
+}
