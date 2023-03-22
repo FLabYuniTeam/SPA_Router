@@ -7,6 +7,24 @@
   --font-size__large: 20px;
 }
 
+body {
+  margin: auto;
+}
+
+i {
+  width: 15px;
+  height: 15px;
+  padding: 10px;
+}
+
+a {
+  border: none;
+  outline: none;
+  color: rgb(174, 163, 163);
+  text-decoration: none;
+  background-color: transparent;
+}
+
 header {
   position: fixed;
   z-index: 1;
@@ -25,6 +43,7 @@ header {
 .logoAndTitle > img {
   width: 25px;
   height: 25px;
+  margin-right: 5px;
 }
 
 .logoAndTitle .title {
@@ -33,22 +52,85 @@ header {
   color: black;
 }
 
-.container {
+.mainContainer {
   display: flex;
+  width: 100%;
+  height: 100%;
   padding-top: 50px;
+  margin-bottom: 100px;
 }
 
-.container-inner {
-  margin: 0 auto;
+.mainContainer-inner {
+  margin: auto;
+}
+
+section {
+  display: flex;
+  height: 150px;
+  margin-bottom: 50px;
+}
+
+section:hover .imgWrap {
+  transform: translateY(-10px);
+}
+
+section:hover .contents-title {
+  color: rgb(162, 162, 224);
+}
+
+.imgWrap {
+  transition: transform 0.3s ease-in-out;
+  margin-right: 20px;
 }
 
 .imgWrap > img {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+}
+
+.contentsInfo {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 70%;
+  margin-top: 20px;
+}
+
+.contentsInfo-title {
+  font-size: var(--font-size__large);
+  color: black;
+}
+
+.contentsInfo-description {
+  font-size: var(--font-size__mediumSmall);
+  color: rgb(24, 23, 23, 0.8);
+}
+
+.contentsInfo-date {
+  margin-top: 10px;
+  font-size: var(--font-size__small);
+  color: rgb(167, 162, 162);
+}
+
+/* contents */
+.contents-container {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 200px;
+  max-width: 400px;
+}
+
+.contents-container > img {
+  height: 80px;
 }
 
 .writer {
   display: flex;
+  flex-direction: row;
+  justify-content: left;
+  height: 30px;
 }
 
 .writer > img {
@@ -70,15 +152,11 @@ header {
   color: rgb(74, 71, 71, 0.5);
 }
 
-.contentsWrap-inner {
-  display: flex;
-}
-
 #contentsBox {
-  margin: 0 auto;
-  width: 700px;
+  width: inherit;
 }
 
+/* footer */
 footer {
   display: flex;
   flex-direction: column;
@@ -162,23 +240,16 @@ label {
   font-size: var(--font-size__large);
 }
 
-i {
-  width: 15px;
-  height: 15px;
-  padding: 10px;
-}
+@media screen and (max-width: 598px) {
+  section {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
 
-a {
-  border: none;
-  outline: none;
-  color: rgb(174, 163, 163);
-  text-decoration: none;
-  background-color: transparent;
-}
-
-@media screen and (max-width: 699px) {
   .imgWrap > img {
-    width: 100vw;
+    height: 50px;
+    width: 100%;
     transition: all 0.5s ease;
   }
 }
