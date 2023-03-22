@@ -1,0 +1,24 @@
+{
+  "name": "spa_router",
+  "version": "1.0.0",
+  "description": "라우터 기능을 이용해 SPA 방식으로 동작하는 사이트를 구현한다. toss.tech 사이트를 벤치마킹해서 만들었습니다.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clapho/SPA_Router.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clapho/SPA_Router/issues"
+  },
+  "homepage": "https://github.com/clapho/SPA_Router#readme",
+  "devDependencies": {
+    "eslint": "^8.36.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5"
+  }
+}
