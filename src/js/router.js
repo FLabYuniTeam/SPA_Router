@@ -8,7 +8,6 @@ function Router($container) {
     const matchedValue = routes.find((route) =>
       route.path.test(window.location.pathname)
     );
-    console.log(matchedValue);
     return matchedValue;
   };
 
