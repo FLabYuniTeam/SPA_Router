@@ -6,7 +6,7 @@ function App($container) {
   this.$container = $container;
 
   const init = () => {
-    document.querySelector('.mainContainer').addEventListener('click', (e) => {
+    this.$container.addEventListener('click', (e) => {
       const $target = e.target.closest('a');
       if (!($target instanceof HTMLAnchorElement)) return;
       e.preventDefault();
