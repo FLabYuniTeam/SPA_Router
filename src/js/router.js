@@ -1,13 +1,11 @@
-import { routes } from "./constants/routeInfo.js";
-import NotFound from "./pages/NotFound.js";
+import { routes } from './constants/routeInfo.js';
+import NotFound from './pages/NotFound.js';
 
 function Router($container) {
   this.$container = $container;
 
   const findMatchedRoute = () => {
-    const matchedValue = routes.find((route) =>
-      route.path.test(window.location.pathname)
-    );
+    const matchedValue = routes.find((route) => route.path.test(window.location.pathname));
     return matchedValue;
   };
 
@@ -17,19 +15,19 @@ function Router($container) {
   };
 
   const init = () => {
-    window.addEventListener("historychange", ({ detail }) => {
+    window.addEventListener('historychange', ({ detail }) => {
       const { to, isReplace } = detail;
 
       if (isReplace || to === window.location.pathname) {
-        window.history.replaceState(null, "", to);
+        window.history.replaceState(null, '', to);
       } else {
-        window.history.pushState(null, "", to);
+        window.history.pushState(null, '', to);
       }
 
       route();
     });
 
-    window.addEventListener("popstate", () => {
+    window.addEventListener('popstate', () => {
       route();
     });
   };
