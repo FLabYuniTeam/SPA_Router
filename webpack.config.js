@@ -31,9 +31,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: './css/style.css',
     }),
-    new MiniCssExtractPlugin({
-      filename: './css/normalize.css',
-    }),
   ],
 
   module: {
@@ -44,11 +41,12 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/,
+        test: /\.(jpe?g|png|gif|svg)$/i,
         use: [
           'file-loader?name=img/[name].[ext]?[hash]',
           'image-webpack-loader',
         ],
+        exclude: /node_modules/,
       },
     ],
   },
