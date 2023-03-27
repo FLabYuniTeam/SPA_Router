@@ -7,10 +7,10 @@ function PostThis($container) {
 
   this.render = () => {
     this.$container.innerHTML = `
-        <img src="./img/coordinates.jpeg" alt="dragImage" />
+        <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/1599d48b-e15c-4a2a-9645-8f877732f026/coordinates.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230327%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230327T025043Z&X-Amz-Expires=86400&X-Amz-Signature=f6b2176e80445ce1f59644b02edac23ccad655ef5a75595c0e9da5766b327e56&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22coordinates.jpeg%22&x-id=GetObject" alt="dragImage" />
         <h1>자바스크립트의 this란?</h1>
         <section class="writer">
-          <img src="./img/jh_profile.jpeg" alt="" />
+          <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/eab8b4aa-2c57-4a81-8b44-aeba48888966/jh_profile.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230327%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230327T024127Z&X-Amz-Expires=86400&X-Amz-Signature=287cdf0e77eec02958d2f8c3e7ab2a694bd775df80f253c26e5b53b8712c0057&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22jh_profile.jpeg%22&x-id=GetObject" alt="" />
           <div class="writer-info">
             <div class="writer-info__nameFiled">
               <span class="writer-info__name">이종현</span>
