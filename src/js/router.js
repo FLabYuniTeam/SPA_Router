@@ -26,7 +26,6 @@ function Router($container) {
 
       route();
     });
-
     window.addEventListener('popstate', () => {
       route();
     });
