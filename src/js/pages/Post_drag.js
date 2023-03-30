@@ -7,10 +7,10 @@ function PostDrag($container) {
 
   this.render = () => {
     this.$container.innerHTML = `
-      <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8bf72ef7-55a5-40c1-9ab3-cdc72171530e/drag-drop-icon.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230328%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230328T053239Z&X-Amz-Expires=86400&X-Amz-Signature=bfa4c493f2672c5e50bc0edbd3e141d72cf4fa22baa134637aa7cc88da615252&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22drag-drop-icon.jpeg%22&x-id=GetObject" alt="dragImage" />
+      <img src="https://velog.velcdn.com/images/dataliteracy/post/67b59c83-49bc-4ead-9b53-d001a46d2439/image.jpeg" alt="dragImage" />
       <h1>Web API_Drag & Drop</h1>
       <section class="writer">
-        <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/eab8b4aa-2c57-4a81-8b44-aeba48888966/jh_profile.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230328%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230328T053332Z&X-Amz-Expires=86400&X-Amz-Signature=e09047a88260fc17eb10d5513a32e51577f99be2af692ab8248467981f456634&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22jh_profile.jpeg%22&x-id=GetObject" alt="" />
+        <img src="https://velog.velcdn.com/images/dataliteracy/post/ce9dffd9-99d8-412e-a47d-7c2490e8bf33/image.png" alt="profileImage" />
         <div class="writer-info">
           <div class="writer-info__nameFiled">
             <span class="writer-info__name">이종현</span>

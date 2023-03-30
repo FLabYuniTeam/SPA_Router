@@ -8,9 +8,9 @@ function Main($container) {
   this.render = () => {
     this.$container.innerHTML = `
         <h1 class="mainTitle">개발</h1>
-        <ul class="secItems">
+        <ul class="postItems">
           <a href="/post/1">
-            <section class="sec1">
+            <section class="postItem">
               <div class="imgWrap">
                 <img src="./img/drag-drop-icon.jpeg" alt="dragImage" />
               </div>
@@ -24,7 +24,7 @@ function Main($container) {
             </section>
           </a>
           <a href="/post/2">
-            <section class="sec2">
+            <section class="postItem">
               <div class="imgWrap">
                 <img src="./img/JS_this.jpeg" alt="JS_thisImage" />
               </div>
@@ -39,7 +39,7 @@ function Main($container) {
             </section>
           </a>
           <a href="/post/3">
-            <section class="sec3">
+            <section class="postItem">
               <div class="imgWrap">
                 <img
                   src="./img/coordinates.jpeg"
@@ -58,7 +58,7 @@ function Main($container) {
             </section>
           </a>
           <a href="/post/4">
-            <section class="sec4">
+            <section class="postItem">
               <div class="imgWrap">
                 <img src="./img/URI.png" alt="uriImage" />
               </div>
@@ -73,7 +73,7 @@ function Main($container) {
             </section>
           </a>
           <a href="/post/5">
-            <section class="sec5">
+            <section class="postItem">
               <div class="imgWrap">
                 <img src="./img/network.png" alt="networkImage" />
               </div>
