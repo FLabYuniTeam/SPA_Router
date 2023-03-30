@@ -11,8 +11,26 @@ body {
   margin: auto;
 }
 
+i {
+  width: 15px;
+  height: 15px;
+  padding: 10px;
+}
+
+a {
+  border: none;
+  outline: none;
+  color: rgb(174, 163, 163);
+  text-decoration: none;
+  background-color: transparent;
+}
+
 header {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
   border-bottom: 1px solid rgb(232, 225, 225);
+  background-color: rgb(240, 240, 247);
 }
 
 .logoAndTitle {
@@ -25,17 +43,20 @@ header {
 .logoAndTitle > img {
   width: 25px;
   height: 25px;
+  margin-right: 5px;
 }
 
 .logoAndTitle .title {
   font-size: 12px;
   line-height: 30px;
+  color: black;
 }
 
 .mainContainer {
   display: flex;
   width: 100%;
   height: 100%;
+  padding-top: 50px;
   margin-bottom: 100px;
 }
 
@@ -43,7 +64,11 @@ header {
   margin: auto;
 }
 
-/* section태그에 flex가 적용되어 있어서 상위의 inner나 container에서 margin이 동작하지 않았다? 그건 아니고 img태그 들어있는데 왜 안되는거지? */
+.mainContainer-inner > img {
+  width: 100%;
+  height: 200px;
+}
+
 section {
   display: flex;
   height: 150px;
@@ -60,6 +85,7 @@ section:hover .contents-title {
 
 .imgWrap {
   transition: transform 0.3s ease-in-out;
+  margin-right: 20px;
 }
 
 .imgWrap > img {
@@ -68,11 +94,7 @@ section:hover .contents-title {
   border-radius: 5px;
 }
 
-.imgWrap {
-  margin-right: 20px;
-}
-
-.contents {
+.contentsInfo {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -81,22 +103,65 @@ section:hover .contents-title {
   margin-top: 20px;
 }
 
-.contents-title {
+.contentsInfo-title {
   font-size: var(--font-size__large);
   color: black;
 }
 
-.contents-description {
+.contentsInfo-description {
   font-size: var(--font-size__mediumSmall);
   color: rgb(24, 23, 23, 0.8);
 }
 
-.contents-date {
+.contentsInfo-date {
   margin-top: 10px;
   font-size: var(--font-size__small);
   color: rgb(167, 162, 162);
 }
 
+/* contents */
+.contents-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+}
+
+.contents-container > img {
+  height: 80px;
+}
+
+.writer {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  height: 30px;
+}
+
+.writer > img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.writer-info__nameFiled {
+  display: flex;
+  margin-top: 5px;
+  font-size: var(--font-size__micro);
+}
+
+.writer-info__date {
+  margin-top: 2px;
+  font-size: calc(var(--font-size__micro) / 2);
+  color: rgb(74, 71, 71, 0.5);
+}
+
+#contentsBox {
+  width: inherit;
+}
+
+/* footer */
 footer {
   display: flex;
   flex-direction: column;
@@ -180,21 +245,7 @@ label {
   font-size: var(--font-size__large);
 }
 
-i {
-  width: 15px;
-  height: 15px;
-  padding: 10px;
-}
-
-a {
-  border: none;
-  outline: none;
-  color: rgb(174, 163, 163);
-  text-decoration: none;
-  background-color: transparent;
-}
-
-@media screen and (max-width: 699px) {
+@media screen and (max-width: 598px) {
   section {
     display: flex;
     justify-content: space-around;

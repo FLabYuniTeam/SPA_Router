@@ -5,7 +5,7 @@ import PostCoordinates from '../pages/Post_coordinates.js';
 import PostURI from '../pages/Post_uri.js';
 import PostNetwork from '../pages/Post_network.js';
 
-export const BASE_URL = 'http://localhost:5500';
+export const BASE_URL = 'http://localhost:8080';
 
 export const routes = [
   { path: /^\/$/, element: Main },
