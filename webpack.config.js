@@ -12,15 +12,20 @@ module.exports = {
   output: {
     filename: './js/[name].js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: 'http://localhost:8080',
+    publicPath: '/dist/',
   },
 
   devServer: {
-    static: './dist',
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
+    // proxy: {
+    //   '^/post(/.*)?$': 'http://localhost:8080',
+    // },
   },
 
   plugins: [
-    new CleanWebpackPlugin(),
+    // new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: './index.html',

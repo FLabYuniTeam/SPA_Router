@@ -12,6 +12,8 @@ server.use(
     publicPath: webpackConfig.output.publicPath,
   })
 );
+server.use(express.static('dist'));
+server.use(express.static('dist/img'));
 
 server.set('port', 8080);
 
