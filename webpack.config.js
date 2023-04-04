@@ -12,12 +12,12 @@ module.exports = {
   output: {
     filename: './js/[name].js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/dist/',
+    publicPath: '/',
   },
 
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist'),
+      directory: path.join(__dirname, '/'),
     },
     // proxy: {
     //   '^/post(/.*)?$': 'http://localhost:8080',
@@ -35,7 +35,7 @@ module.exports = {
     }),
 
     new MiniCssExtractPlugin({
-      filename: './css/style.css',
+      filename: './src/css/style.css',
     }),
   ],
 
