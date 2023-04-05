@@ -8,9 +8,9 @@ function PostThis($container) {
   this.render = () => {
     this.$container.innerHTML = `
         <img src="https://velog.velcdn.com/images/dataliteracy/post/dc4a56bf-b790-49ec-a784-8e97bfb5171e/image.png" alt="uriImage" />
-        <h1>자바스크립트의 this란?</h1>
+        <h1>URI에 대해</h1>
         <section class="writer">
-          <img src="https://velog.velcdn.com/images/dataliteracy/post/ce9dffd9-99d8-412e-a47d-7c2490e8bf33/image.png" alt="profileImage" />
+          <img src="/img/jh_profile.jpeg" alt="profileImage" />
           <div class="writer-info">
             <div class="writer-info__nameFiled">
               <span class="writer-info__name">이종현</span>

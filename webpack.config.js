@@ -10,16 +10,19 @@ module.exports = {
   },
 
   output: {
-    filename: './js/[name].js',
+    filename: 'js/[name].js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
   },
 
   devServer: {
-    static: './dist',
+    static: {
+      directory: path.join(__dirname, '/'),
+    },
   },
 
   plugins: [
-    new CleanWebpackPlugin(),
+    // new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: './index.html',
@@ -27,15 +30,16 @@ module.exports = {
       showErrors: true,
       chunks: ['index'],
     }),
+
     new MiniCssExtractPlugin({
-      filename: './css/style.css',
+      filename: 'css/style.css',
     }),
   ],
 
   module: {
     rules: [
       {
-        test: /\.css$/i,
+        test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
         exclude: /node_modules/,
       },

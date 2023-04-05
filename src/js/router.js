@@ -5,7 +5,10 @@ function Router($container) {
   this.$container = $container;
 
   const findMatchedRoute = () => {
-    const matchedValue = routes.find((route) => route.path.test(window.location.pathname));
+    const matchedValue = routes.find(
+      (route) => route.path === window.location.pathname,
+    );
+
     return matchedValue;
   };
 
@@ -26,6 +29,7 @@ function Router($container) {
 
       route();
     });
+
     window.addEventListener('popstate', () => {
       route();
     });

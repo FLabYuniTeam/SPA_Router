@@ -7,10 +7,10 @@ function PostThis($container) {
 
   this.render = () => {
     this.$container.innerHTML = `
-        <img src="https://velog.velcdn.com/images/dataliteracy/post/674ad2e1-d1d3-4015-96d2-788f1e6f0845/image.png" alt="networkImage" />
-        <h1>자바스크립트의 this란?</h1>
+        <img src="/img/network.png" alt="networkImage" />
+        <h1>네트워크 관련 키워드와 전체적인 흐름</h1>
         <section class="writer">
-          <img src="https://velog.velcdn.com/images/dataliteracy/post/ce9dffd9-99d8-412e-a47d-7c2490e8bf33/image.png" alt="profileImage" />
+          <img src="/img/jh_profile.jpeg" alt="profileImage" />
           <div class="writer-info">
             <div class="writer-info__nameFiled">
               <span class="writer-info__name">이종현</span>

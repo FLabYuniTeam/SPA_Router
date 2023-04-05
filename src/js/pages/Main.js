@@ -12,7 +12,7 @@ function Main($container) {
           <a href="/post/1">
             <section class="postItem">
               <div class="imgWrap">
-                <img src="./img/drag-drop-icon.jpeg" alt="dragImage" />
+                <img src="/img/drag-drop-icon.jpeg" alt="dragImage" />
               </div>
               <div class="contentsInfo">
                 <h1 class="contentsInfo-title">Web API_Drag & Drop</h1>
@@ -26,7 +26,7 @@ function Main($container) {
           <a href="/post/2">
             <section class="postItem">
               <div class="imgWrap">
-                <img src="./img/JS_this.jpeg" alt="JS_thisImage" />
+                <img src="/img/JS_this.jpeg" />
               </div>
               <div class="contentsInfo">
                 <h1 class="contentsInfo-title">자바스크립트의 this란?</h1>
@@ -42,7 +42,7 @@ function Main($container) {
             <section class="postItem">
               <div class="imgWrap">
                 <img
-                  src="./img/coordinates.jpeg"
+                  src="img/coordinates.jpeg"
                   alt="coordinatesImage"
                 />
               </div>
@@ -60,7 +60,7 @@ function Main($container) {
           <a href="/post/4">
             <section class="postItem">
               <div class="imgWrap">
-                <img src="./img/URI.png" alt="uriImage" />
+                <img src="/img/URI.png" alt="uriImage" />
               </div>
               <div class="contentsInfo">
                 <h1 class="contentsInfo-title">URI에 대해</h1>
@@ -75,7 +75,7 @@ function Main($container) {
           <a href="/post/5">
             <section class="postItem">
               <div class="imgWrap">
-                <img src="./img/network.png" alt="networkImage" />
+                <img src="/img/network.png" alt="networkImage" />
               </div>
               <div class="contentsInfo">
                 <h1 class="contentsInfo-title">
