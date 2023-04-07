@@ -1,11 +1,11 @@
-function Main($container) {
-  this.$container = $container;
-
-  this.setState = () => {
+class Main {
+  $container: Element;
+  constructor($container: Element) {
+    this.$container = $container;
     this.render();
-  };
+  }
 
-  this.render = () => {
+  render() {
     this.$container.innerHTML = `
         <h1 class="mainTitle">개발</h1>
         <ul class="postItems">
@@ -91,9 +91,7 @@ function Main($container) {
           </a>
         </ul>
     `;
-  };
-
-  this.render();
+  }
 }
 
 export default Main;

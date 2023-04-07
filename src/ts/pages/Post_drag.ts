@@ -1,11 +1,11 @@
-function PostDrag($container) {
-  this.$container = $container;
-
-  this.setState = () => {
+class PostDrag {
+  $container: Element;
+  constructor($container: Element) {
+    this.$container = $container;
     this.render();
-  };
+  }
 
-  this.render = () => {
+  render() {
     this.$container.innerHTML = `
       <img src="/img/drag-drop-icon.jpeg" alt="dragImage" />
       <h1>Web API_Drag & Drop</h1>
@@ -38,9 +38,7 @@ function PostDrag($container) {
         </div>
       </div>
     `;
-  };
-
-  this.render();
+  }
 }
 
 export default PostDrag;

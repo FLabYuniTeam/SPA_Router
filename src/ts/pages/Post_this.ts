@@ -1,11 +1,11 @@
-function PostThis($container) {
-  this.$container = $container;
-
-  this.setState = () => {
+class PostThis {
+  $container: Element;
+  constructor($container: Element) {
+    this.$container = $container;
     this.render();
-  };
+  }
 
-  this.render = () => {
+  render() {
     this.$container.innerHTML = `
         <img src="https://velog.velcdn.com/images/dataliteracy/post/03e93da2-1928-4b2c-89c1-a856203cca28/image.jpeg" alt="thisImage" />
         
@@ -39,9 +39,7 @@ function PostThis($container) {
           </div>
         </div>
     `;
-  };
-
-  this.render();
+  }
 }
 
 export default PostThis;

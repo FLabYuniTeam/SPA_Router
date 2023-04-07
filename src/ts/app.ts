@@ -2,12 +2,14 @@ import navigate from './utils/navigate';
 import Router from './router';
 import { BASE_URL } from './constants/routeInfo';
 
-function App($container) {
-  this.$container = $container;
+class App {
+  $container: Element;
 
-  const init = () => {
-    this.$container.addEventListener('click', (e) => {
-      const $target = e.target.closest('a');
+  constructor($container: Element) {
+    this.$container = $container;
+    this.$container.addEventListener('click', (e: Event) => {
+      const eventTarget = e.target as HTMLElement;
+      const $target = eventTarget.closest('a');
       if (!($target instanceof HTMLAnchorElement)) return;
       e.preventDefault();
       const targetURL = $target.href.replace(BASE_URL, '');
@@ -15,9 +17,7 @@ function App($container) {
     });
 
     new Router($container);
-  };
-
-  init();
+  }
 }
 
 export default App;

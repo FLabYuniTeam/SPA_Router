@@ -1,11 +1,11 @@
-function PostNetwork($container) {
-  this.$container = $container;
-
-  this.setState = () => {
+class PostNetwork {
+  $container: Element;
+  constructor($container: Element) {
+    this.$container = $container;
     this.render();
-  };
+  }
 
-  this.render = () => {
+  render() {
     this.$container.innerHTML = `
         <img src="/img/network.png" alt="networkImage" />
         <h1>네트워크 관련 키워드와 전체적인 흐름</h1>
@@ -36,9 +36,7 @@ function PostNetwork($container) {
           </div>
         </div>
     `;
-  };
-
-  this.render();
+  }
 }
 
 export default PostNetwork;

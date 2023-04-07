@@ -1,11 +1,11 @@
-function PostCoordinates($container) {
-  this.$container = $container;
-
-  this.setState = () => {
+class PostCoordinates {
+  $container: Element;
+  constructor($container: Element) {
+    this.$container = $container;
     this.render();
-  };
+  }
 
-  this.render = () => {
+  render() {
     this.$container.innerHTML = `
         <img src="/img/coordinates.jpeg" alt="coordinatesImage" />
         <h1>clientX, pageX, screenX, offsetX의 차이점</h1>
@@ -47,9 +47,7 @@ function PostCoordinates($container) {
           </div>
         </div>
     `;
-  };
-
-  this.render();
+  }
 }
 
 export default PostCoordinates;

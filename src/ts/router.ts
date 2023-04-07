@@ -1,25 +1,11 @@
 import { routes } from './constants/routeInfo';
 import NotFound from './pages/NotFound';
 
-function Router($container) {
-  this.$container = $container;
+class Router {
+  $container: Element;
 
-  const findMatchedRoute = () => {
-    const matchedValue = routes.find(
-      (route) =>
-        // route.path.test(window.location.pathname)
-        route.path === window.location.pathname
-    );
-
-    return matchedValue;
-  };
-
-  const route = () => {
-    const TargetPage = findMatchedRoute()?.element || NotFound;
-    new TargetPage(this.$container);
-  };
-
-  const init = () => {
+  constructor($container: Element) {
+    this.$container = $container;
     window.addEventListener('historychange', ({ detail }: any) => {
       const { to, isReplace } = detail;
 
@@ -29,16 +15,28 @@ function Router($container) {
         window.history.pushState(null, '', to);
       }
 
-      route();
+      this.route();
     });
 
     window.addEventListener('popstate', () => {
-      route();
+      this.route();
     });
-  };
 
-  init();
-  route();
+    this.route();
+  }
+
+  findMatchedRoute() {
+    const matchedValue = routes.find(
+      (route) => route.path === window.location.pathname
+    );
+
+    return matchedValue;
+  }
+
+  route() {
+    const TargetPage = this.findMatchedRoute()?.element || NotFound;
+    new TargetPage(this.$container);
+  }
 }
 
 export default Router;

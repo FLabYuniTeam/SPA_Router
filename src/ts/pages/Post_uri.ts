@@ -1,11 +1,10 @@
-function PostURI($container) {
-  this.$container = $container;
+class PostURI {
+  $container: Element;
+  constructor($container: Element) {
+    this.$container = $container;
+  }
 
-  this.setState = () => {
-    this.render();
-  };
-
-  this.render = () => {
+  render() {
     this.$container.innerHTML = `
         <img src="https://velog.velcdn.com/images/dataliteracy/post/dc4a56bf-b790-49ec-a784-8e97bfb5171e/image.png" alt="uriImage" />
         <h1>URI에 대해</h1>
@@ -33,9 +32,7 @@ function PostURI($container) {
           </div>
         </div>
     `;
-  };
-
-  this.render();
+  }
 }
 
 export default PostURI;
