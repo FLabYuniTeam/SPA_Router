@@ -7,10 +7,10 @@ function PostDrag($container) {
 
   this.render = () => {
     this.$container.innerHTML = `
-      <img src='https://velog.velcdn.com/images/dataliteracy/post/67b59c83-49bc-4ead-9b53-d001a46d2439/image.jpeg' alt="dragImage" />
+      <img src="/img/drag-drop-icon.jpeg" alt="dragImage" />
       <h1>Web API_Drag & Drop</h1>
       <section class="writer">
-        <img src='https://velog.velcdn.com/images/dataliteracy/post/ce9dffd9-99d8-412e-a47d-7c2490e8bf33/image.png' alt="" />
+        <img src="/img/jh_profile.jpeg" alt="profileImage" />
         <div class="writer-info">
           <div class="writer-info__nameFiled">
             <span class="writer-info__name">이종현</span>

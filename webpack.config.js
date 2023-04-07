@@ -6,44 +6,36 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    index: path.join(__dirname, 'src', './js/index.js'),
+    index: path.join(__dirname, '/src/js/index.js'),
   },
 
   output: {
-    filename: './js/[name].js',
+    filename: 'js/[name].js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/dist/',
+    publicPath: '/',
   },
-
-  devServer: {
-    static: {
-      directory: path.join(__dirname, 'dist'),
-    },
-    // proxy: {
-    //   '^/post(/.*)?$': 'http://localhost:8080',
-    // },
-  },
-
   plugins: [
-    // new CleanWebpackPlugin(),
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      filename: './index.html',
+      filename: 'index.html',
       hash: true,
       showErrors: true,
       chunks: ['index'],
     }),
 
     new MiniCssExtractPlugin({
-      filename: './css/style.css',
+      filename: 'css/style.css',
     }),
   ],
-
+  devServer: {
+    historyApiFallback: true,
+  },
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: ['style-loader', 'css-loader'],
         exclude: /node_modules/,
       },
       {
