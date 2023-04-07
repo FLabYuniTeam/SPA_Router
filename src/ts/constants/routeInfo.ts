@@ -1,9 +1,9 @@
-import Main from '../pages/Main.js';
-import PostDrag from '../pages/Post_drag.js';
-import PostThis from '../pages/Post_this.js';
-import PostCoordinates from '../pages/Post_coordinates.js';
-import PostURI from '../pages/Post_uri.js';
-import PostNetwork from '../pages/Post_network.js';
+import Main from '../pages/Main';
+import PostDrag from '../pages/Post_drag';
+import PostThis from '../pages/Post_this';
+import PostCoordinates from '../pages/Post_coordinates';
+import PostURI from '../pages/Post_uri';
+import PostNetwork from '../pages/Post_network';
 
 export const BASE_URL = 'http://localhost:8080';
 

@@ -1,6 +1,6 @@
-import navigate from './utils/navigate.js';
-import Router from './router.js';
-import { BASE_URL } from './constants/routeInfo.js';
+import navigate from './utils/navigate';
+import Router from './router';
+import { BASE_URL } from './constants/routeInfo';
 
 function App($container) {
   this.$container = $container;

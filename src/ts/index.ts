@@ -1,4 +1,4 @@
-import App from './app.js';
+import App from './app';
 import '../css/style.css';
 import '../css/normalize.css';
 import '../img/F-Lab_Logo.png';

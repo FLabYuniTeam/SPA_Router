@@ -1,5 +1,5 @@
-import { routes } from './constants/routeInfo.js';
-import NotFound from './pages/NotFound.js';
+import { routes } from './constants/routeInfo';
+import NotFound from './pages/NotFound';
 
 function Router($container) {
   this.$container = $container;
@@ -20,7 +20,7 @@ function Router($container) {
   };
 
   const init = () => {
-    window.addEventListener('historychange', ({ detail }) => {
+    window.addEventListener('historychange', ({ detail }: any) => {
       const { to, isReplace } = detail;
 
       if (isReplace || to === window.location.pathname) {
