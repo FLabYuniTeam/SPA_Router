@@ -1,13 +1,14 @@
 import { routes } from './constants/routeInfo';
 import NotFound from './pages/NotFound';
+import { CustomData } from './utils/navigate';
 
 class Router {
   $container: Element;
 
   constructor($container: Element) {
     this.$container = $container;
-    window.addEventListener('historychange', ({ detail }: any) => {
-      const { to, isReplace } = detail;
+    window.addEventListener('historychange', ((e: CustomEvent<CustomData>) => {
+      const { to, isReplace } = e.detail;
 
       if (isReplace || to === window.location.pathname) {
         window.history.replaceState(null, '', to);
@@ -16,7 +17,7 @@ class Router {
       }
 
       this.route();
-    });
+    }) as EventListener);
 
     window.addEventListener('popstate', () => {
       this.route();
@@ -29,7 +30,7 @@ class Router {
     const matchedValue = routes.find(
       (route) => route.path === window.location.pathname
     );
-
+    
     return matchedValue;
   }
 
