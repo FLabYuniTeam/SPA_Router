@@ -11,7 +11,5 @@ import '../img/jh_profile.jpeg';
 
 window.addEventListener('DOMContentLoaded', () => {
   const $target = document.querySelector('.mainContainer-inner') as Element;
-  if($target) {
-    new App($target);
-  }
+  new App($target);
 });
