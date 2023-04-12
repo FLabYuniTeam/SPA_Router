@@ -64,6 +64,11 @@ header {
   margin: auto;
 }
 
+.mainContainer-inner > img {
+  width: 100%;
+  height: 200px;
+}
+
 section {
   display: flex;
   height: 150px;
