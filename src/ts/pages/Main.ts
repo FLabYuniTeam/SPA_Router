@@ -1,12 +1,13 @@
-class Main {
-  $container: Element;
-  constructor($container: Element) {
-    this.$container = $container;
-    this.render();
-  }
+import { PageElements } from '../pages/PageType';
 
-  render() {
-    this.$container.innerHTML = `
+class Main extends PageElements {
+	constructor($container: Element) {
+		super($container);
+		this.render();
+	}
+
+	render() {
+		this.$container.innerHTML = `
         <h1 class="mainTitle">개발</h1>
         <ul class="postItems">
           <a href="/post/1">
@@ -91,7 +92,7 @@ class Main {
           </a>
         </ul>
     `;
-  }
+	}
 }
 
 export default Main;

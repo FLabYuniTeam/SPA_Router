@@ -1,17 +1,18 @@
-class NotFound {
-  $container: Element;
-  constructor($container: Element) {
-    this.$container = $container;
-    this.render();
-  }
+import { PageElements } from '../pages/PageType';
 
-  render() {
-    this.$container.innerHTML = `
+class NotFound extends PageElements {
+	constructor($container: Element) {
+		super($container);
+		this.render();
+	}
+
+	render() {
+		this.$container.innerHTML = `
       <main class="notFoundPage">
         404 NOT FOUND
       </main>
     `;
-  }
+	}
 }
 
 export default NotFound;

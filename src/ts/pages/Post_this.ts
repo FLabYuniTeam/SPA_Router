@@ -1,12 +1,13 @@
-class PostThis {
-  $container: Element;
-  constructor($container: Element) {
-    this.$container = $container;
-    this.render();
-  }
+import { PageElements } from '../pages/PageType';
 
-  render() {
-    this.$container.innerHTML = `
+class PostThis extends PageElements {
+	constructor($container: Element) {
+		super($container);
+		this.render();
+	}
+
+	render() {
+		this.$container.innerHTML = `
         <img src="https://velog.velcdn.com/images/dataliteracy/post/03e93da2-1928-4b2c-89c1-a856203cca28/image.jpeg" alt="thisImage" />
         
         <h1>자바스크립트의 this란?</h1>
@@ -39,7 +40,7 @@ class PostThis {
           </div>
         </div>
     `;
-  }
+	}
 }
 
 export default PostThis;

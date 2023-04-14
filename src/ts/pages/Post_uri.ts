@@ -1,11 +1,13 @@
-class PostURI {
-  $container: Element;
-  constructor($container: Element) {
-    this.$container = $container;
-  }
+import { PageElements } from '../pages/PageType';
 
-  render() {
-    this.$container.innerHTML = `
+class PostURI extends PageElements {
+	constructor($container: Element) {
+		super($container);
+		this.render();
+	}
+
+	render() {
+		this.$container.innerHTML = `
         <img src="https://velog.velcdn.com/images/dataliteracy/post/dc4a56bf-b790-49ec-a784-8e97bfb5171e/image.png" alt="uriImage" />
         <h1>URI에 대해</h1>
         <section class="writer">
@@ -32,7 +34,7 @@ class PostURI {
           </div>
         </div>
     `;
-  }
+	}
 }
 
 export default PostURI;

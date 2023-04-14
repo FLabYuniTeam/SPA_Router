@@ -1,12 +1,13 @@
-class PostCoordinates {
-  $container: Element;
-  constructor($container: Element) {
-    this.$container = $container;
-    this.render();
-  }
+import { PageElements } from '../pages/PageType';
 
-  render() {
-    this.$container.innerHTML = `
+class PostCoordinates extends PageElements {
+	constructor($container: Element) {
+		super($container);
+		this.render();
+	}
+
+	render() {
+		this.$container.innerHTML = `
         <img src="/img/coordinates.jpeg" alt="coordinatesImage" />
         <h1>clientX, pageX, screenX, offsetX의 차이점</h1>
         <section class="writer">
@@ -47,7 +48,7 @@ class PostCoordinates {
           </div>
         </div>
     `;
-  }
+	}
 }
 
 export default PostCoordinates;

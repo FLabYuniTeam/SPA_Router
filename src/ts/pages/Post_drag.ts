@@ -1,12 +1,13 @@
-class PostDrag {
-  $container: Element;
-  constructor($container: Element) {
-    this.$container = $container;
-    this.render();
-  }
+import { PageElements } from '../pages/PageType';
 
-  render() {
-    this.$container.innerHTML = `
+class PostDrag extends PageElements {
+	constructor($container: Element) {
+		super($container);
+		this.render();
+	}
+
+	render() {
+		this.$container.innerHTML = `
       <img src="/img/drag-drop-icon.jpeg" alt="dragImage" />
       <h1>Web API_Drag & Drop</h1>
       <section class="writer">
@@ -38,7 +39,7 @@ class PostDrag {
         </div>
       </div>
     `;
-  }
+	}
 }
 
 export default PostDrag;

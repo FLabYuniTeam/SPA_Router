@@ -1,12 +1,13 @@
-class PostNetwork {
-  $container: Element;
-  constructor($container: Element) {
-    this.$container = $container;
-    this.render();
-  }
+import { PageElements } from '../pages/PageType';
 
-  render() {
-    this.$container.innerHTML = `
+class PostNetwork extends PageElements {
+	constructor($container: Element) {
+		super($container);
+		this.render();
+	}
+
+	render() {
+		this.$container.innerHTML = `
         <img src="/img/network.png" alt="networkImage" />
         <h1>네트워크 관련 키워드와 전체적인 흐름</h1>
         <section class="writer">
@@ -36,7 +37,7 @@ class PostNetwork {
           </div>
         </div>
     `;
-  }
+	}
 }
 
 export default PostNetwork;
